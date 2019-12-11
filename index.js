@@ -2,7 +2,7 @@
  * @Author: zhouhong07
  * @Date: 2019-08-20 14:35:06
  * @LastEditors:
- * @LastEditTime: 2019-12-07 14:19:08
+ * @LastEditTime: 2019-12-11 18:03:58
  * @Description: file content
  */
 (function(global, namespace, factory) {
@@ -305,6 +305,5 @@
       }
     }
   };
-  window.LocalCache = LocalCache;
   return LocalCache;
 });

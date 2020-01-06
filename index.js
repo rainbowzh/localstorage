@@ -1,8 +1,8 @@
 /*
  * @Author: zhouhong07
  * @Date: 2019-08-20 14:35:06
- * @LastEditors:
- * @LastEditTime: 2019-12-11 18:03:58
+ * @LastEditors  : zhouhong07
+ * @LastEditTime : 2020-01-06 14:38:07
  * @Description: file content
  */
 (function(global, namespace, factory) {
@@ -78,7 +78,7 @@
               let _key = name[j].key;
               let _value = name[j].value;
               let _time = name[j].time;
-              let _other = name[j]._other;
+              let _other = name[j].other;
               let cacheValue = {
                 value: _value,
                 time: this._setCacheTimeIn(_time),
@@ -98,7 +98,7 @@
             let _key = name.key;
             let _value = name.value;
             let _time = name.time;
-            let _other = name._other;
+            let _other = name.other;
             let cacheValue = {
               value: _value,
               time: this._setCacheTimeIn(_time),
@@ -192,7 +192,7 @@
             let _key = name.key;
             let _value = name.value;
             let _time = name.time;
-            let _other = name._other;
+            let _other = name.other;
             let cacheValue = {
               value: _value,
               time: this._setCacheTimeIn(_time),

@@ -2,7 +2,7 @@
  * @Author: zhouhong07
  * @Date: 2019-08-20 14:35:06
  * @LastEditors  : zhouhong07
- * @LastEditTime : 2020-01-06 15:44:02
+ * @LastEditTime : 2020-01-06 15:51:17
  * @Description: file content
  */
 (function(global, namespace, factory) {
@@ -199,8 +199,10 @@
               other: _other
             };
             if (this._getValueArr(_key)) {
-              this.remove(_key);
-              this.valueArr.push({ name: _key, value: cacheValue });
+              let curItem = this._getValueArr(_key);
+              curItem.value.time > new Date()
+                ? ""
+                : this.valueArr.push({ name: _key, value: cacheValue });
             } else {
               this.valueArr.push({ name: _key, value: cacheValue });
             }

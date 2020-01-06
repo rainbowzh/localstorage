@@ -2,7 +2,7 @@
  * @Author: zhouhong07
  * @Date: 2019-08-20 14:35:06
  * @LastEditors  : zhouhong07
- * @LastEditTime : 2020-01-06 15:51:17
+ * @LastEditTime : 2020-01-06 16:07:08
  * @Description: file content
  */
 (function(global, namespace, factory) {
@@ -236,11 +236,12 @@
       if (this._isSupport()) {
         //ToDo
         //判断是否已经存在这个属性
-        this._init();
         let originKey = window.localStorage.getItem(this.keyName);
         if (originKey) {
           this._setCacheFormat(name, value, time, other);
         } else {
+          this._init();
+          this._setCacheFormat(name, value, time, other);
           console.log("数据被手动删除");
         }
       } else {
@@ -249,7 +250,6 @@
     },
 
     get: function(name) {
-      this._init();
       let originKey = window.localStorage.getItem(this.keyName);
       if (this._isSupport && name && originKey) {
         return this._getValueArr(name);
@@ -275,7 +275,6 @@
     },
 
     remove: function(value) {
-      this._init();
       let originKey = window.localStorage.getItem(this.keyName);
       if (value && originKey) {
         let item = this._getValueArr(value);
